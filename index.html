@@ -3,821 +3,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SKHelp.io — Your AI Workforce. Your Success.</title>
-    <meta name="description" content="AI automation platform for small businesses. Real estate, legal, healthcare AI agents. Automate workflows, boost productivity, increase revenue.">
-    
+    <title>SKHelp — AI Workforce for Small Businesses</title>
+    <meta name="description" content="Industry-specific AI agents for real estate, legal, healthcare, and more. Automate workflows, delight customers, and grow your business — without giving up your data.">
+    <link rel="canonical" href="https://skhelp.io">
+
     <!-- Open Graph -->
-    <meta property="og:title" content="SKHelp.io — Your AI Workforce. Your Success.">
-    <meta property="og:description" content="AI automation platform that turns small businesses into AI success stories. Industry-specific agents for real estate, legal, healthcare.">
+    <meta property="og:title" content="SKHelp — Your AI Workforce. Your Success.">
+    <meta property="og:description" content="Industry-specific AI agents for small businesses. Real estate, legal, healthcare. Automate workflows, boost productivity, own your data.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://skhelp.io">
     <meta property="og:site_name" content="SKWorld">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SKHelp.io — Your AI Workforce. Your Success.">
-    <meta name="twitter:description" content="AI automation platform for small businesses. Industry-specific agents that work 24/7.">
-
-    <!-- Canonical -->
-    <link rel="canonical" href="https://skhelp.io">
+    <meta name="twitter:title" content="SKHelp — AI Workforce for Small Business">
+    <meta name="twitter:description" content="Industry-specific AI agents that work 24/7 — on your infrastructure, under your control.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
-    
-    <!-- Fonts -->
+
+    <link rel="stylesheet" href="../shared-assets/css/sk-design-system.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* SKHelp Brand Colors */
         :root {
-            --primary: #0F172A;
-            --secondary: #1E293B;
-            --accent: #3B82F6;
-            --success: #10B981;
-            --warning: #F59E0B;
-            --danger: #EF4444;
-            --white: #FFFFFF;
-            --gray-50: #F8FAFC;
-            --gray-100: #F1F5F9;
-            --gray-200: #E2E8F0;
-            --gray-300: #CBD5E1;
-            --gray-400: #94A3B8;
-            --gray-500: #64748B;
-            --gray-600: #475569;
-            --gray-700: #334155;
-            --gray-800: #1E293B;
-            --gray-900: #0F172A;
+            --page-primary: var(--sk-gold);
+            --page-secondary: var(--sk-green);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Source Sans 3', sans-serif;
-            background: var(--white);
-            color: var(--gray-900);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Navigation */
-        nav {
-            background: var(--white);
-            border-bottom: 1px solid var(--gray-200);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            font-family: 'Inter', sans-serif;
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: var(--gray-900);
-            text-decoration: none;
-        }
-
-        .logo .accent {
-            color: var(--accent);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--gray-600);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        .cta-button {
-            background: var(--accent);
-            color: var(--white);
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.2s;
-        }
-
-        .cta-button:hover {
-            background: #2563EB;
-            transform: translateY(-1px);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
-            padding: 6rem 0;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
+        .hero-icon {
+            font-size: 7rem;
             margin-bottom: 1.5rem;
-            color: var(--gray-900);
+            filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.5));
         }
-
-        .hero .tagline {
-            font-size: 1.25rem;
-            color: var(--accent);
-            font-weight: 600;
+        .hero-title {
+            font-size: clamp(3.5rem, 9vw, 7rem);
+            font-weight: 900;
+            line-height: 1.05;
             margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--sk-gold) 0%, var(--sk-green-muted) 60%, var(--sk-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-
-        .hero .subtitle {
-            font-size: 1.125rem;
-            color: var(--gray-600);
-            margin-bottom: 3rem;
+        .hero-tagline {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 700;
+            color: var(--sk-gold);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: var(--sk-text-muted);
+            max-width: 720px;
+            margin: 0 auto 2.5rem;
             line-height: 1.7;
         }
-
-        .hero-buttons {
+        .hero-badges {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-bottom: 2.5rem;
+        }
+        .stat-strip {
             display: flex;
-            gap: 1rem;
             justify-content: center;
+            gap: 3rem;
             flex-wrap: wrap;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: rgba(255, 215, 0, 0.04);
+            border: 1px solid rgba(255, 215, 0, 0.15);
+            border-radius: var(--sk-radius-xl);
+            max-width: 900px;
         }
-
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background: #2563EB;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--gray-700);
-            border: 2px solid var(--gray-300);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            transform: translateY(-2px);
-        }
-
-        /* Features Section */
-        .features {
-            padding: 6rem 0;
-            background: var(--white);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
+        .stat { text-align: center; }
+        .stat-value {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--gray-900);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--sk-gold), var(--sk-green-muted));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
+        .stat-label { font-size: 0.85rem; color: var(--sk-text-dim); margin-top: 0.25rem; }
 
-        .section-header p {
-            font-size: 1.125rem;
-            color: var(--gray-600);
-            max-width: 600px;
+        .section-title { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; text-align: center; margin-bottom: 0.75rem; }
+        .section-subtitle { text-align: center; font-size: 1.2rem; color: var(--sk-text-muted); max-width: 600px; margin: 0 auto 3.5rem; }
+
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            max-width: 1100px;
             margin: 0 auto;
         }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--gray-200);
-            transition: all 0.3s;
-            text-align: center;
-        }
-
-        .feature-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: var(--gray-900);
-        }
-
-        .feature-card p {
-            color: var(--gray-600);
-            line-height: 1.6;
-        }
-
-        /* Industries Section */
-        .industries {
-            padding: 6rem 0;
-            background: var(--gray-50);
-        }
-
-        .industries-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
         .industry-card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--gray-200);
-            transition: all 0.3s;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--sk-radius-lg);
+            padding: 2rem;
+            transition: all 0.3s ease;
         }
-
         .industry-card:hover {
-            border-color: var(--accent);
+            border-color: rgba(255, 215, 0, 0.3);
             transform: translateY(-4px);
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.08);
+        }
+        .industry-card .ind-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+        .industry-card h3 { color: var(--sk-gold); margin-bottom: 0.5rem; font-size: 1.05rem; }
+        .industry-card p { color: var(--sk-text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.75rem; }
+        .industry-card .use-cases { font-size: 0.8rem; color: var(--sk-text-dim); font-family: var(--sk-font-mono); }
+
+        .sk-section--alt { background: rgba(255, 215, 0, 0.02); }
+
+        .stack-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-top: 2rem; }
+        .stack-pill {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--sk-border);
+            border-radius: var(--sk-radius-sm);
+            padding: 0.4rem 1rem;
+            font-family: var(--sk-font-mono);
+            font-size: 0.8rem;
+            color: var(--sk-text-dim);
         }
 
-        .industry-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .industry-icon {
-            font-size: 2.5rem;
-            margin-right: 1rem;
-        }
-
-        .industry-card h3 {
-            font-size: 1.5rem;
-            color: var(--gray-900);
-        }
-
-        .industry-features {
-            list-style: none;
-            space-y: 0.5rem;
-        }
-
-        .industry-features li {
-            color: var(--gray-600);
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .industry-features li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--success);
-            font-weight: bold;
-        }
-
-        /* Pricing Section */
-        .pricing {
-            padding: 6rem 0;
-            background: var(--white);
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .pricing-card {
-            background: var(--white);
-            border: 2px solid var(--gray-200);
-            border-radius: 12px;
-            padding: 2.5rem;
-            text-align: center;
-            position: relative;
-            transition: all 0.3s;
-        }
-
-        .pricing-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-        }
-
-        .pricing-card.featured {
-            border-color: var(--accent);
-            transform: scale(1.05);
-            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
-        }
-
-        .pricing-badge {
-            background: var(--accent);
-            color: var(--white);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .pricing-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--gray-900);
-        }
-
-        .pricing-card .price {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-        }
-
-        .pricing-card .price-period {
-            color: var(--gray-500);
-            font-size: 1rem;
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin: 2rem 0;
-            text-align: left;
-        }
-
-        .pricing-features li {
-            color: var(--gray-600);
-            margin-bottom: 0.75rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .pricing-features li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--success);
-            font-weight: bold;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--accent) 0%, #2563EB 100%);
-            color: var(--white);
-            padding: 6rem 0;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--white);
-        }
-
-        .cta-section p {
-            font-size: 1.125rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn-white {
-            background: var(--white);
-            color: var(--accent);
-        }
-
-        .btn-white:hover {
-            background: var(--gray-100);
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--gray-900);
-            color: var(--gray-300);
-            padding: 3rem 0 1.5rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            color: var(--white);
-            margin-bottom: 1rem;
-            font-size: 1.125rem;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-links a {
-            color: var(--gray-300);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid var(--gray-700);
-            padding-top: 1.5rem;
-            text-align: center;
-            color: var(--gray-400);
-            font-size: 0.875rem;
-        }
-
-        .footer-brand {
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .pricing-card.featured {
-                transform: none;
-            }
-        }
-
-        /* Stats Section */
-        .stats {
-            background: var(--gray-900);
-            color: var(--white);
-            padding: 4rem 0;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-item h3 {
-            font-size: 3rem;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-item p {
-            color: var(--gray-300);
-            font-size: 1.125rem;
-        }
+        @media (max-width: 600px) { .stat-strip { gap: 1.5rem; } }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">🤖 <span class="accent">SK</span>Help</a>
-            <ul class="nav-links">
+    <div class="sk-bg-stars"><div class="stars"></div><div class="stars"></div><div class="stars"></div></div>
+    <div class="sk-bg-pulse"></div>
+
+    <!-- Nav -->
+    <nav class="sk-nav">
+        <div class="sk-nav__inner">
+            <a href="https://skhelp.io" class="sk-nav__logo">🤖 <span class="accent">SK</span>Help</a>
+            <ul class="sk-nav__links">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#industries">Industries</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#start">Get Started</a></li>
+                <li><a href="https://skcapstone.io">SKCapstone</a></li>
+                <li><a href="https://skworld.io">SKWorld</a></li>
                 <li><a href="https://github.com/smilinTux/skhelp" target="_blank">GitHub</a></li>
-                <li><a href="#start" class="cta-button">Get Started</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Your AI Workforce.<br>Your Success.</h1>
-                <p class="tagline">Automate the World, Empower Humans</p>
-                <p class="subtitle">Turn your small business into an AI success story with our industry-specific automation platform. Real estate, legal, healthcare AI agents that work 24/7 to boost your productivity and revenue.</p>
-                <div class="hero-buttons">
-                    <a href="#start" class="btn btn-primary">Start Free Trial</a>
-                    <a href="#demo" class="btn btn-secondary">Watch Demo</a>
+    <!-- Hero -->
+    <section class="sk-section--hero">
+        <div class="sk-container sk-container--narrow" style="text-align:center;">
+            <div style="font-family: var(--sk-font-mono); color: var(--sk-gold); margin-bottom: 1rem; font-size: 0.95rem; opacity: 0.8;">SKHelp.workforce.deploy(industry="yours")</div>
+            <div class="hero-icon sk-float">🤖</div>
+            <h1 class="hero-title">SKHelp</h1>
+            <p class="hero-tagline">Your AI Workforce. Your Success. Your Data.</p>
+            <p class="hero-subtitle">
+                Industry-specific AI agents built for small businesses that can't afford to give Big Tech control over
+                their customer data. Real estate, legal, healthcare — sovereign agents that work 24/7 on infrastructure you own.
+            </p>
+            <div class="hero-badges">
+                <span class="sk-badge sk-badge--gold">🏢 Industry-Specific</span>
+                <span class="sk-badge sk-badge--green">⏰ 24/7 Availability</span>
+                <span class="sk-badge sk-badge--cyan">🔒 Data Sovereign</span>
+                <span class="sk-badge sk-badge--purple">🚫 No SaaS Lock-In</span>
+            </div>
+            <div class="sk-btn-group">
+                <a href="#industries" class="sk-btn sk-btn--primary">🏢 See Industries</a>
+                <a href="#features" class="sk-btn sk-btn--secondary">⚡ Features</a>
+                <a href="#start" class="sk-btn sk-btn--secondary">🚀 Get Started</a>
+            </div>
+
+            <div class="stat-strip">
+                <div class="stat">
+                    <div class="stat-value">24/7</div>
+                    <div class="stat-label">Always Available</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Data Ownership</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">$0</div>
+                    <div class="stat-label">SaaS Fees</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">∞</div>
+                    <div class="stat-label">Scalability</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>47%</h3>
-                    <p>Average Productivity Increase</p>
+    <!-- Features -->
+    <section id="features" class="sk-section sk-section--alt">
+        <div class="sk-container">
+            <h2 class="section-title" style="color: var(--sk-gold);">⚡ What SKHelp Delivers</h2>
+            <p class="section-subtitle">AI automation that puts your business first — not a VC-backed SaaS platform.</p>
+            <div class="sk-grid sk-grid--3">
+                <div class="sk-card sk-card--accent-top">
+                    <span class="sk-card__icon">🎯</span>
+                    <h3 class="sk-card__title">Industry-Trained Agents</h3>
+                    <span class="sk-card__tag">SPECIALIZED</span>
+                    <p class="sk-card__body">Agents trained on real workflows for your industry. Not generic chatbots — purpose-built AI that speaks your domain's language and handles domain-specific tasks.</p>
                 </div>
-                <div class="stat-item">
-                    <h3>$2.3B</h3>
-                    <p>Market Opportunity</p>
+                <div class="sk-card sk-card--accent-top">
+                    <span class="sk-card__icon">🔒</span>
+                    <h3 class="sk-card__title">Sovereign Customer Data</h3>
+                    <span class="sk-card__tag">PRIVACY FIRST</span>
+                    <p class="sk-card__body">Customer conversations, records, and interactions stay on your infrastructure. No SaaS platform harvesting your client relationships for their own AI training.</p>
                 </div>
-                <div class="stat-item">
-                    <h3>30+</h3>
-                    <p>Business Processes Automated</p>
+                <div class="sk-card sk-card--accent-top">
+                    <span class="sk-card__icon">⚙️</span>
+                    <h3 class="sk-card__title">Workflow Automation</h3>
+                    <span class="sk-card__tag">PRODUCTIVE</span>
+                    <p class="sk-card__body">Automate intake, scheduling, follow-ups, document collection, and status updates. Let agents handle repetitive work while your team focuses on clients.</p>
                 </div>
-                <div class="stat-item">
-                    <h3>24/7</h3>
-                    <p>AI Workforce Availability</p>
+                <div class="sk-card sk-card--accent-top">
+                    <span class="sk-card__icon">💬</span>
+                    <h3 class="sk-card__title">Multi-Channel Presence</h3>
+                    <span class="sk-card__tag">OMNICHANNEL</span>
+                    <p class="sk-card__body">Agents accessible via web chat, SMS, voice, and email. One deployment, every channel — consistent experience without managing multiple third-party integrations.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Your Complete AI Workforce</h2>
-                <p>Pre-trained AI agents ready to transform your business operations from day one.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Analytics Agent</h3>
-                    <p>Customer behavior analysis, sales performance tracking, ROI calculation, and predictive forecasting to drive data-driven decisions.</p>
+                <div class="sk-card sk-card--accent-top">
+                    <span class="sk-card__icon">📊</span>
+                    <h3 class="sk-card__title">Private Analytics</h3>
+                    <span class="sk-card__tag">INSIGHTS</span>
+                    <p class="sk-card__body">Business intelligence derived from your own data — on your own infrastructure. Understand customer patterns without feeding that insight to a competitor's AI platform.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📝</div>
-                    <h3>Content Agent</h3>
-                    <p>Blog posts, social media content, email campaigns, and website copy optimization to maintain consistent marketing presence.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Marketing Agent</h3>
-                    <p>Lead generation campaigns, social media management, SEO optimization, and ad campaign management for growth acceleration.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚖️</div>
-                    <h3>Compliance Agent</h3>
-                    <p>Contract review, legal document generation, compliance monitoring, and risk assessment to protect your business.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Security Agent</h3>
-                    <p>Cybersecurity monitoring, data backup automation, access control management, and threat detection for peace of mind.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔍</div>
-                    <h3>Research Agent</h3>
-                    <p>Market research, competitor analysis, industry trend monitoring, and customer sentiment analysis for strategic advantage.</p>
+                <div class="sk-card sk-card--accent-top">
+                    <span class="sk-card__icon">🧩</span>
+                    <h3 class="sk-card__title">SKWorld Integration</h3>
+                    <span class="sk-card__tag">ECOSYSTEM</span>
+                    <p class="sk-card__body">Native integration with CapAuth, SKComm, SKData, and SKMemory. Your AI workforce talks to your sovereign infrastructure — not random third-party APIs.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Industries Section -->
-    <section class="industries" id="industries">
-        <div class="container">
-            <div class="section-header">
-                <h2>Industry-Specific Solutions</h2>
-                <p>Pre-built AI workflows designed for your industry's unique challenges and opportunities.</p>
-            </div>
-            <div class="industries-grid">
+    <!-- Industries -->
+    <section id="industries" class="sk-section">
+        <div class="sk-container">
+            <h2 class="section-title" style="background: linear-gradient(135deg, var(--sk-gold), var(--sk-green-muted)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">🏢 Industry Agents</h2>
+            <p class="section-subtitle">Purpose-built AI agents for the industries where data sovereignty matters most.</p>
+            <div class="industry-grid">
                 <div class="industry-card">
-                    <div class="industry-header">
-                        <div class="industry-icon">🏠</div>
-                        <h3>Real Estate</h3>
-                    </div>
-                    <ul class="industry-features">
-                        <li>Lead qualification automation</li>
-                        <li>Property valuation analysis</li>
-                        <li>Market trend reporting</li>
-                        <li>Client communication management</li>
-                        <li>Document generation (contracts, listings)</li>
-                        <li>Social media property promotion</li>
-                    </ul>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-header">
-                        <div class="industry-icon">⚖️</div>
-                        <h3>Legal Practice</h3>
-                    </div>
-                    <ul class="industry-features">
-                        <li>Case research and analysis</li>
-                        <li>Document drafting and review</li>
-                        <li>Client intake automation</li>
-                        <li>Billing and time tracking</li>
-                        <li>Compliance monitoring</li>
-                        <li>Court filing assistance</li>
-                    </ul>
+                    <div class="ind-icon">🏠</div>
+                    <h3>Real Estate</h3>
+                    <p>Lead qualification, property inquiries, showing scheduling, and follow-ups — automated. Close deals faster while keeping client data off Big Tech servers.</p>
+                    <div class="use-cases">📋 Listings • 📅 Showings • 💰 Offers • 📑 Contracts</div>
                 </div>
                 <div class="industry-card">
-                    <div class="industry-header">
-                        <div class="industry-icon">🏥</div>
-                        <h3>Healthcare</h3>
-                    </div>
-                    <ul class="industry-features">
-                        <li>Appointment scheduling optimization</li>
-                        <li>Insurance verification</li>
-                        <li>Patient communication</li>
-                        <li>Billing automation</li>
-                        <li>Compliance documentation</li>
-                        <li>Medical record management</li>
-                    </ul>
+                    <div class="ind-icon">⚖️</div>
+                    <h3>Legal</h3>
+                    <p>Client intake, document collection, appointment scheduling, and status updates. Attorney-client privilege protected because your infrastructure is yours alone.</p>
+                    <div class="use-cases">📋 Intake • 📄 Documents • 📅 Scheduling • 🔔 Updates</div>
+                </div>
+                <div class="industry-card">
+                    <div class="ind-icon">🏥</div>
+                    <h3>Healthcare</h3>
+                    <p>HIPAA-aware patient communication, appointment reminders, insurance pre-auth assistance, and aftercare follow-up — on infrastructure you control.</p>
+                    <div class="use-cases">📅 Appointments • 💊 Reminders • 🔔 Follow-ups • 📋 Intake</div>
+                </div>
+                <div class="industry-card">
+                    <div class="ind-icon">🛠️</div>
+                    <h3>Trades & Services</h3>
+                    <p>Job booking, estimate requests, dispatch coordination, and customer updates for plumbers, electricians, HVAC techs, and contractors.</p>
+                    <div class="use-cases">📅 Booking • 💵 Estimates • 🚐 Dispatch • 🔔 Updates</div>
+                </div>
+                <div class="industry-card">
+                    <div class="ind-icon">🎓</div>
+                    <h3>Education</h3>
+                    <p>Student intake, course guidance, tutoring scheduling, and progress tracking for independent schools, tutors, and training programs.</p>
+                    <div class="use-cases">📚 Enrollment • 📅 Sessions • 📊 Progress • 💬 Support</div>
+                </div>
+                <div class="industry-card">
+                    <div class="ind-icon">💼</div>
+                    <h3>Professional Services</h3>
+                    <p>Client onboarding, project status updates, billing inquiries, and document collection for accountants, consultants, and agencies.</p>
+                    <div class="use-cases">📋 Onboarding • 📊 Status • 💰 Billing • 📄 Docs</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2>Choose Your AI Workforce</h2>
-                <p>Flexible pricing that grows with your business success.</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <div class="price">$49<span class="price-period">/month</span></div>
-                    <ul class="pricing-features">
-                        <li>1 AI Agent</li>
-                        <li>Basic automation workflows</li>
-                        <li>Email support</li>
-                        <li>Dashboard analytics</li>
-                        <li>30-day free trial</li>
-                    </ul>
-                    <a href="#start" class="btn btn-primary">Start Free Trial</a>
-                </div>
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Most Popular</div>
-                    <h3>Professional</h3>
-                    <div class="price">$149<span class="price-period">/month</span></div>
-                    <ul class="pricing-features">
-                        <li>3 AI Agents</li>
-                        <li>Custom workflow automation</li>
-                        <li>Priority support</li>
-                        <li>Advanced analytics</li>
-                        <li>Integration support</li>
-                        <li>White-glove onboarding</li>
-                    </ul>
-                    <a href="#start" class="btn btn-primary">Start Free Trial</a>
-                </div>
-                <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <div class="price">$299<span class="price-period">/month</span></div>
-                    <ul class="pricing-features">
-                        <li>5+ AI Agents</li>
-                        <li>Custom development</li>
-                        <li>Dedicated support</li>
-                        <li>White-label options</li>
-                        <li>API access</li>
-                        <li>Success guarantee</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary">Contact Sales</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Get Started -->
+    <section id="start" class="sk-section sk-section--alt">
+        <div class="sk-container sk-container--narrow" style="text-align:center;">
+            <h2 class="section-title" style="color: var(--sk-gold);">🚀 Deploy Your AI Workforce</h2>
+            <p class="section-subtitle">SKHelp is powered by SKCapstone — the sovereign agent framework. Deploy on your own server in minutes.</p>
 
-    <!-- CTA Section -->
-    <section class="cta-section" id="start">
-        <div class="container">
-            <h2>Ready to Automate Your Success?</h2>
-            <p>Join thousands of businesses already using AI to work smarter, not harder. Start your 30-day free trial today.</p>
-            <a href="#contact" class="btn btn-white">Start Free Trial</a>
+            <div class="sk-code">
+                <div class="comment"># Install SKCapstone (includes SKHelp)</div>
+                <div class="cmd">pip install skcapstone</div>
+                <br>
+                <div class="comment"># Initialize SKHelp for your industry</div>
+                <div class="success">skhelp init --industry real-estate --name "Acme Realty AI"</div>
+                <br>
+                <div class="comment"># Deploy your AI workforce</div>
+                <div class="accent">skhelp deploy --channels web,sms --auth capauth</div>
+                <br>
+                <div class="comment"># Monitor your agents</div>
+                <div class="purple">skhelp status --dashboard</div>
+            </div>
+
+            <div class="sk-btn-group" style="margin-top: 2rem;">
+                <a href="https://skcapstone.io" class="sk-btn sk-btn--primary" target="_blank">🏛️ Get SKCapstone</a>
+                <a href="https://github.com/smilinTux/skhelp" class="sk-btn sk-btn--secondary" target="_blank">📦 SKHelp on GitHub</a>
+                <a href="https://skworld.io" class="sk-btn sk-btn--secondary" target="_blank">🌍 SKWorld Ecosystem</a>
+            </div>
+
+            <div class="stack-pills">
+                <span class="stack-pill">Python</span>
+                <span class="stack-pill">SKCapstone</span>
+                <span class="stack-pill">CapAuth</span>
+                <span class="stack-pill">SKComm</span>
+                <span class="stack-pill">SKData</span>
+                <span class="stack-pill">SKMemory</span>
+                <span class="stack-pill">GPL-3.0</span>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>🤖 SKHelp.io</h4>
-                    <p>Your AI workforce. Your success. Empowering small businesses with industry-specific AI automation that actually works.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="#features">AI Agents</a></li>
-                        <li><a href="#industries">Industries</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#">Documentation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Ecosystem</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://skcapstone.io" target="_blank">🏛️ SKCapstone</a></li>
-                        <li><a href="https://capauth.io" target="_blank">🔐 CapAuth</a></li>
-                        <li><a href="https://skmemory.io" target="_blank">🧠 SKMemory</a></li>
-                        <li><a href="https://sksecurity.io" target="_blank">🛡️ SKSecurity</a></li>
-                        <li><a href="https://skforge.io" target="_blank">🔨 SKForge</a></li>
-                        <li><a href="https://skstacks.io" target="_blank">📦 SKStacks</a></li>
-                        <li><a href="https://skworld.io" target="_blank">🌍 SKWorld</a></li>
-                        <li><a href="https://smilintux.org" target="_blank">🐧 smilinTux</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul class="footer-links">
-                        <li><a href="mailto:support@skhelp.io">support@skhelp.io</a></li>
-                        <li><a href="mailto:hello@skhelp.io">hello@skhelp.io</a></li>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="https://github.com/smilinTux/skhelp" target="_blank">GitHub</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>🤖 SKHelp.io — Making AI Work for Humans, Not Against Them</p>
-                <p class="footer-brand">🐧 A smilinTux Product • smilinTux</p>
-                <p>GPL-3.0 License • Built by AI, for AI, for humans • #staycuriousANDkeepsmilin</p>
-            </div>
+    <footer class="sk-footer">
+        <div class="sk-footer__links">
+            <a href="https://skcapstone.io">🏛️ SKCapstone</a>
+            <a href="https://capauth.io">🔐 CapAuth</a>
+            <a href="https://skchat.io">💬 SKChat</a>
+            <a href="https://skcomm.io">📡 SKComm</a>
+            <a href="https://skmemory.io">🧠 SKMemory</a>
+            <a href="https://sksecurity.io">🛡️ SKSecurity</a>
+            <a href="https://skdata.io">🗄️ SKData</a>
+            <a href="https://skforge.io">⚒️ SKForge</a>
+            <a href="https://skworld.io">🌍 SKWorld</a>
+            <a href="https://github.com/smilinTux" target="_blank">🐧 GitHub</a>
+        </div>
+        <div class="sk-footer__copy">
+            © 2026 SKWorld — Sovereign Technology for Creators<br>
+            <span style="color: var(--sk-gold);">staycuriousANDkeepsmilin</span> • GPL-3.0 •
+            <span style="color: var(--sk-pink);">Built with ♥ by smilinTux</span> 🐧
         </div>
     </footer>
 </body>
-</html><!-- Deploy trigger Sat Feb 14 08:16:35 PM EST 2026 -->
+</html>
