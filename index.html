@@ -363,6 +363,67 @@
         color: #52525b;
       }
 
+      /* ── Own the Full Vertical band ─────────── */
+      .vertical-band {
+        max-width: 64rem;
+        margin: 0 auto;
+        padding: 0 1rem 3rem;
+      }
+      .vertical-band-inner {
+        border: 1px solid rgba(52,211,153,0.25);
+        background: linear-gradient(135deg, rgba(6,78,59,0.2) 0%, rgba(5,150,105,0.08) 60%, rgba(0,0,0,0) 100%);
+        border-radius: 0.75rem;
+        padding: 2.5rem;
+        text-align: center;
+      }
+      .vertical-kicker {
+        font-family: 'Geist Mono', ui-monospace, monospace;
+        font-size: 0.75rem; letter-spacing: 0.15em;
+        text-transform: uppercase; color: #34d399;
+        margin-bottom: 1rem; display: block;
+      }
+      .vertical-headline {
+        font-size: clamp(1.5rem, 3vw, 2.25rem);
+        font-weight: 700; line-height: 1.2;
+        color: #fafafa; margin-bottom: 1rem;
+      }
+      .vertical-headline span { color: #34d399; }
+      .vertical-manifesto {
+        font-size: 1rem; color: #a1a1aa;
+        line-height: 1.7; max-width: 42rem;
+        margin: 0 auto 1.25rem;
+      }
+      .vertical-manifesto strong { color: #fafafa; }
+      .vertical-sovereignty {
+        font-size: 0.9rem; color: #71717a;
+        margin-bottom: 1.75rem; font-style: italic;
+      }
+      .vertical-sovereignty strong { color: #a1a1aa; font-style: normal; }
+      .vertical-links {
+        display: flex; flex-wrap: wrap; gap: 0.6rem;
+        justify-content: center; margin-bottom: 1.75rem;
+      }
+      .vertical-link {
+        display: inline-flex; align-items: center; gap: 0.35rem;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(52,211,153,0.2);
+        border-radius: 20px; padding: 0.4rem 1rem;
+        font-size: 0.8rem; color: #a1a1aa;
+        text-decoration: none; transition: all 0.2s;
+      }
+      .vertical-link:hover {
+        border-color: #34d399; color: #34d399;
+        background: rgba(52,211,153,0.05);
+      }
+      .vertical-link.current {
+        border-color: rgba(52,211,153,0.5);
+        color: #34d399; font-weight: 600;
+        background: rgba(52,211,153,0.08);
+      }
+      .vertical-cta-row {
+        display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;
+      }
+
       /* ── Mobile ──────────────────────────────── */
       @media (max-width: 768px) {
         .features-grid {
@@ -413,6 +474,7 @@
       <div class="hero-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg></div>
       <h1>SK<span style="color:#34d399">Help</span></h1>
       <p class="tagline">Your AI Workforce. Your Success. Your Data.</p>
+      <p style="font-size:0.9rem;color:#52525b;margin-top:-1rem;margin-bottom:1.5rem;font-style:italic;">Your data never leaves. Your keys never leave. Own the full vertical.</p>
       <div class="cta-row">
           <a href="#install" class="btn-primary">Get Started</a>
           <a href="https://github.com/smilinTux/skhelp" class="btn-outline" target="_blank" rel="noopener">View on GitHub</a>
@@ -466,6 +528,46 @@
       <section class="architect-banner">
         <p>Shape the future &rarr; <a href="https://skarchitect.io">Submit proposals and vote at skarchitect.io</a></p>
       </section>
+
+    <!-- Own the Full Vertical -->
+    <div class="vertical-band" id="vertical" aria-labelledby="vertical-heading">
+      <div class="vertical-band-inner">
+        <span class="vertical-kicker">Own the Full Vertical</span>
+        <h2 class="vertical-headline" id="vertical-heading">
+          SKHelp is your <span>Apps layer</span>.<br>Your AI workforce — your data, your success.
+        </h2>
+        <p class="vertical-manifesto">
+          The modern stack is rented. Your customer data lives on someone else's disk, behind someone else's key,
+          served by a model that phones home. <strong>SKHelp is different.</strong>
+          Industry-specific AI agents that run on your infrastructure — no SaaS lock-in, no data harvesting,
+          no subscription that owns your workflow. Your AI workforce, your data, your success.
+        </p>
+        <p class="vertical-sovereignty">
+          <strong>Your data never leaves. Your keys never leave.</strong>
+          No cloud you don't control, no vendor you can't walk away from.
+          Sovereignty isn't a feature — it's the foundation.
+        </p>
+        <!-- Ecosystem as vertical layers -->
+        <div class="vertical-links" role="list" aria-label="SKWorld vertical layers">
+          <a href="https://souls.skworld.io" class="vertical-link" role="listitem">🎭 Soul</a>
+          <a href="https://skarchitect.io" class="vertical-link" role="listitem">⚒️ Apps</a>
+          <a href="https://skcomm.io" class="vertical-link" role="listitem">💬 Comms</a>
+          <a href="https://skmemory.io" class="vertical-link" role="listitem">🧠 Data</a>
+          <a href="https://capauth.io" class="vertical-link" role="listitem">🔐 Identity</a>
+          <a href="https://sksecurity.io" class="vertical-link" role="listitem">🛡️ Security</a>
+          <a href="https://skos.skworld.io" class="vertical-link" role="listitem">🐧 OS (skos)</a>
+        </div>
+        <div class="vertical-cta-row">
+          <a href="https://skworld.io" class="btn-primary" style="font-size:0.9rem;padding:0.65rem 1.4rem;">
+            🌍 See the whole vertical →
+          </a>
+          <a href="https://github.com/smilinTux/skhelp" class="btn-outline" style="font-size:0.9rem;padding:0.65rem 1.4rem;" target="_blank" rel="noopener">
+            Own it on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
       <p>Part of the <a href="https://skworld.io" style="color:#34d399;text-decoration:none">SKWorld</a> sovereign ecosystem</p>
